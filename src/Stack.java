@@ -2,13 +2,13 @@
 *
 * NAME: Kahlin Baughman
 *
-* HOMEWORK: 5
+* HOMEWORK: 6
 *
 * CLASS: ICS 211
 *
 * INSTRUCTOR: Scott Robertson
 *
-* DATE: February 26, 2016
+* DATE: March 8, 2016
 *
 * FILE: Stack.java
 *
@@ -19,9 +19,9 @@
 import java.util.*;
 
 public class Stack<E> {
-    
+
     SLLNode<E> stacktop;
-    
+
     /********************************************************************
 	*
 	* Method: Stack
@@ -33,11 +33,11 @@ public class Stack<E> {
 	* @return None
 	*
 	********************************************************************/
-    
+
     public Stack(){
         stacktop = null;
     }
-    
+
     /********************************************************************
 	*
 	* Method: push
@@ -49,7 +49,7 @@ public class Stack<E> {
 	* @return E element
 	*
 	********************************************************************/
-    
+
     public E push(E element){
         //pushes the egiven element to the top of the stack and returns the element
         if(stacktop == null){
@@ -62,7 +62,7 @@ public class Stack<E> {
         }
         return element;
     }
-    
+
         /********************************************************************
 	*
 	* Method: pop
@@ -74,12 +74,12 @@ public class Stack<E> {
 	* @return E temp
 	*
 	********************************************************************/
-    
+
     public E pop(){
         //Removes and returns the element at the top of the Stack, or throws an
         //EmptyStackException otherwise
         if(stacktop == null){
-            throw new EmptyStackException(); 
+            throw new EmptyStackException();
         }
         else{
             E temp = stacktop.getData();
@@ -87,7 +87,7 @@ public class Stack<E> {
             return temp;
         }
     }
-    
+
         /********************************************************************
 	*
 	* Method: peek
@@ -99,7 +99,7 @@ public class Stack<E> {
 	* @return E data
 	*
 	********************************************************************/
-    
+
     public E peek(){
         //Returns the element at the top of the Stack, or throws an
         //EmptyStackException otherwise
@@ -110,7 +110,7 @@ public class Stack<E> {
             return stacktop.getData();
         }
     }
-    
+
         /********************************************************************
 	*
 	* Method: empty
@@ -122,7 +122,7 @@ public class Stack<E> {
 	* @return boolean empty
 	*
 	********************************************************************/
-    
+
     public boolean empty(){
         //Returns true if the Stack is empty, or false otherwise
         boolean empty = false;
@@ -131,5 +131,5 @@ public class Stack<E> {
         }
         return empty;
     }
-    
+
 }

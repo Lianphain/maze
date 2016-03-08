@@ -2,13 +2,13 @@
 *
 * NAME: Kahlin Baughman
 *
-* HOMEWORK: 5
+* HOMEWORK: 6
 *
 * CLASS: ICS 211
 *
 * INSTRUCTOR: Scott Robertson
 *
-* DATE: February 26, 2016
+* DATE: March 8, 2016
 *
 * FILE: SLLNode.java
 *
@@ -17,10 +17,10 @@
 ***************************************************************************************/
 
 public class SLLNode<E> {
-    
+
     private SLLNode<E> next;
     private E data;
-	
+
         /********************************************************************
 	*
 	* Method: SLLNode
@@ -32,12 +32,12 @@ public class SLLNode<E> {
 	* @return None
 	*
 	********************************************************************/
-    
+
 	public SLLNode(E newData){
 		data = newData;
 		next = null;
 	}
-	
+
 	/********************************************************************
 	*
 	* Method: setData
@@ -49,11 +49,11 @@ public class SLLNode<E> {
 	* @return None
 	*
 	********************************************************************/
-	
+
 	public void setData(E newData){
 		data = newData;
 	}
-	
+
 	/********************************************************************
 	*
 	* Method: getData
@@ -65,11 +65,11 @@ public class SLLNode<E> {
 	* @return data
 	*
 	********************************************************************/
-	
+
 	public E getData(){
 		return data;
 	}
-	
+
 	/********************************************************************
 	*
 	* Method: setNext
@@ -81,11 +81,11 @@ public class SLLNode<E> {
 	* @return None
 	*
 	********************************************************************/
-	
+
 	public void setNext(SLLNode<E> node){
 		next = node;
 	}
-	
+
 	/********************************************************************
 	*
 	* Method: getNext
@@ -97,7 +97,7 @@ public class SLLNode<E> {
 	* @return next
 	*
 	********************************************************************/
-	
+
 	public SLLNode<E> getNext(){
 		return next;
 	}

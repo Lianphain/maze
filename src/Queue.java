@@ -2,13 +2,13 @@
 *
 * NAME: Kahlin Baughman
 *
-* HOMEWORK: 5
+* HOMEWORK: 6
 *
 * CLASS: ICS 211
 *
 * INSTRUCTOR: Scott Robertson
 *
-* DATE: February 26, 2016
+* DATE: March 8, 2016
 *
 * FILE: Queue.java
 *
@@ -19,9 +19,9 @@
 import java.util.*;
 
 public class Queue<E> {
-    
+
     SLLNode<E> queuestart;
-    
+
         /********************************************************************
 	*
 	* Method: Queue
@@ -33,11 +33,11 @@ public class Queue<E> {
 	* @return E element
 	*
 	********************************************************************/
-    
+
     public Queue(){
         queuestart = null;
     }
-    
+
         /********************************************************************
 	*
 	* Method: offer
@@ -49,7 +49,7 @@ public class Queue<E> {
 	* @return E element
 	*
 	********************************************************************/
-    
+
     public E offer(E element){
         //Adds the given element to the end of the queue and returns the element
         if(queuestart == null){
@@ -64,7 +64,7 @@ public class Queue<E> {
         }
         return element;
     }
-    
+
         /********************************************************************
 	*
 	* Method: poll
@@ -76,13 +76,13 @@ public class Queue<E> {
 	* @return E poll
 	*
 	********************************************************************/
-    
+
     public E poll(){
         //Removes and returns the head of the queue, or returns null if the queue
         //is empty
         E poll = null;
         if(queuestart == null){
-            
+
         }
         else{
             poll = queuestart.getData();
@@ -90,7 +90,7 @@ public class Queue<E> {
         }
         return poll;
     }
-    
+
         /********************************************************************
 	*
 	* Method: remove
@@ -102,7 +102,7 @@ public class Queue<E> {
 	* @return E remove
 	*
 	********************************************************************/
-    
+
     public E remove(){
         //Removes and returns the head of the queue, or throws a
         //NoSuchElementException if the queue is empty
@@ -115,7 +115,7 @@ public class Queue<E> {
             return remove;
         }
     }
-    
+
         /********************************************************************
 	*
 	* Method: peek
@@ -127,19 +127,19 @@ public class Queue<E> {
 	* @return E peek
 	*
 	********************************************************************/
-    
+
     public E peek(){
         //Returns the head of the queue, or returns null if the queue is empty
         E peek = null;
         if(queuestart == null){
-            
+
         }
         else{
             peek = queuestart.getData();
         }
         return peek;
     }
-    
+
         /********************************************************************
 	*
 	* Method: element
@@ -151,7 +151,7 @@ public class Queue<E> {
 	* @return E element
 	*
 	********************************************************************/
-    
+
     public E element(){
         //Returns the head of the queue, or throws a NoSuchElementException if
         //the queue is empty
