@@ -19,20 +19,29 @@
  import java.io.*;
 
 public class Maze{
-  int rows;
-  int cols;
+  private int rows;
+  private int cols;
+  private Grid maze;
+  private String fileName;
 
 
 
   /* Constructs the maze of a given size, using the given file.*/
   public Maze(int numRows, int numCols, String filename){
+    maze = new Grid(numRows, numCols);
     rows = numRows;
     cols = numCols;
-    Scanner fr = new Scanner(filename);
-    while(fr.hasNext()){
-      
+    fileName = filename;
+    Scanner fr = new Scanner(new FileReader(filename));
+    try{
+        for(int i = 0; i < numRows; i++){
+          for(int j = 0; j < numCols; j++){
+            maze.setData(i, j, fr.next());
+          }
+        }
+    } catch(Exception e){
+      System.out.println("Fuck you, put in a maze file damn it");
     }
-
   }
 
   /*Traverses through the maze using a Stack. If there is no start, print “This maze has no start!”
@@ -58,6 +67,13 @@ public class Maze{
 
   /*Returns a String representation of the maze*/
   public String toString(){
-
+    String temp = "";
+    for(int i = 0; i < numRows; i++){
+      for(int j = 0; j < numCols; j++){
+        temp += (maze.getData(i, j) + " ")
+      }
+      temp += "\n";
+    }
+    return temp;
   }
 }
