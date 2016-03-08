@@ -15,3 +15,9 @@
  * DESCRIPTION: This is the main calss that runs all the methods
  *
  ***************************************************************************************/
+public class Driver{
+  public static void main(String[] args) {
+    Maze test = new Maze(6, 7, "maze1.txt");
+    test.toString();
+  }
+}
