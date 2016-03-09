@@ -44,17 +44,17 @@ public class Maze{
     }
   }
 
-  //Traverses through the maze using a Stack. If there is no start, print “This maze has no start!”
-  //If an exit cannot be found then print, “No exit was found.” Otherwise, as soon as an exit has
-  //been found, stop traversing through the maze, and print, “You have found the exit!” Each
+  //Traverses through the maze using a Stack. If there is no start, print "This maze has no start!"
+  //If an exit cannot be found then print, "No exit was found". Otherwise, as soon as an exit has
+  //been found, stop traversing through the maze, and print, "You have found the exit!" Each
   //time a cell is visited, print the maze.
   public void findExitUsingStack(){
 
   }
 
-  //Traverses through the maze using a Queue. If there is no start, print “This maze has no start!”
-  //If an exit cannot be found then print, “No exit was found.” Otherwise, as soon as an exit has
-  //been found, stop traversing through the maze, and print, “You have found the exit!” Each
+  //Traverses through the maze using a Queue. If there is no start, print "This maze has no start!"
+  //If an exit cannot be found then print, "No exit was found." Otherwise, as soon as an exit has
+  //been found, stop traversing through the maze, and print, "You have found the exit!" Each
   //time a cell is visited, print the maze.
   public void findExitUsingQueue(){
 
