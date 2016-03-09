@@ -26,6 +26,20 @@ public class Maze{
 
 
 
+  /********************************************************************
+	*
+	* Method: Maze
+	*
+	* Description: Constructs the maze of a given size, using the given file.
+	*
+	* @param  numRows  Contains the number of rows the grid should have
+  *         numCols  Contains the number of columns the grid should have
+  *         filename Contains the file name of the file for the maze
+	*
+	* @return None
+	*
+	********************************************************************/
+
   // Constructs the maze of a given size, using the given file.
   public Maze(int numRows, int numCols, String filename){
     maze = new Grid(numRows, numCols);
@@ -44,6 +58,20 @@ public class Maze{
     }
   }
 
+
+
+  /********************************************************************
+	*
+	* Method: findExitUsingStack
+	*
+	* Description: Traverses through the maze using a stack
+	*
+	* @param  None
+	*
+	* @return None
+	*
+	********************************************************************/
+
   //Traverses through the maze using a Stack. If there is no start, print "This maze has no start!"
   //If an exit cannot be found then print, "No exit was found". Otherwise, as soon as an exit has
   //been found, stop traversing through the maze, and print, "You have found the exit!" Each
@@ -51,6 +79,19 @@ public class Maze{
   public void findExitUsingStack(){
 
   }
+
+
+  /********************************************************************
+	*
+	* Method: findExitUsingQueue
+	*
+	* Description: Traverses through the maze using a stack
+	*
+	* @param  None
+	*
+	* @return None
+	*
+	********************************************************************/
 
   //Traverses through the maze using a Queue. If there is no start, print "This maze has no start!"
   //If an exit cannot be found then print, "No exit was found." Otherwise, as soon as an exit has
@@ -60,10 +101,38 @@ public class Maze{
 
   }
 
+
+
+  /********************************************************************
+	*
+	* Method: resetMaze
+	*
+	* Description: Resets the maze to the initial maze
+	*
+	* @param  None
+	*
+	* @return None
+	*
+	********************************************************************/
+
   //Resets the maze using the initial file.
   public void resetMaze(){
     maze = new Grid(rows, cols);
   }
+
+
+
+  /********************************************************************
+	*
+	* Method: toString
+	*
+	* Description: Converts the maze to a String
+	*
+	* @param  None
+	*
+	* @return String temp
+	*
+	********************************************************************/
 
   //Returns a String representation of the maze
   public String toString(){

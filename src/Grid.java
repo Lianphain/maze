@@ -29,7 +29,7 @@ public class Grid {
 	* Description: Constructs a grid with the given dimensions
 	*
 	* @param  numRows  Contains the number of rows the grid should have
-   *         numCols  Contains the number of columns the grid should have
+  *         numCols  Contains the number of columns the grid should have
 	*
 	* @return None
 	*
