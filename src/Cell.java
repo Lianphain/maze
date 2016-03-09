@@ -12,18 +12,18 @@
  *
  * FILE: Cell.java
  *
- * DESCRIPTION: This file contains the Cell class for homework 6. You can think of a 
+ * DESCRIPTION: This file contains the Cell class for homework 6. You can think of a
  *              Cell in the same way that you think of a node.
  *
  ***************************************************************************************/
- 
+
 public class Cell {
   private Cell north;
   private Cell east;
   private Cell south;
   private Cell west;
   private String data;
-  
+
   /********************************************************************
 	*
 	* Method: Cell
@@ -31,11 +31,11 @@ public class Cell {
 	* Description: Constructor for the Cell class
 	*
 	* @param  None
-	* 			
+	*
 	* @return None
-	* 		
+	*
 	********************************************************************/
-   
+
   public Cell() {
     north = null;
     east = null;
@@ -43,7 +43,7 @@ public class Cell {
     west = null;
     data = null;
   }
-  
+
   /********************************************************************************
 	*
 	* Method: setNorth
@@ -51,15 +51,15 @@ public class Cell {
 	* Description: Sets the north value of the current cell to a given cell
 	*
 	* @param  cell  The Cell which will be directly north of the current cell
-	* 			
+	*
 	* @return None
-	* 		
+	*
 	********************************************************************************/
 
   public void setNorth(Cell cell) {
     this.north = cell;
   }
-  
+
   /********************************************************************************
 	*
 	* Method: setEast
@@ -67,15 +67,15 @@ public class Cell {
 	* Description: Sets the east value of the current cell to a given cell
 	*
 	* @param  cell  The Cell which will be directly east of the current cell
-	* 			
+	*
 	* @return None
-	* 		
+	*
 	********************************************************************************/
-   
+
   public void setEast(Cell cell) {
     this.east = cell;
   }
-  
+
   /********************************************************************************
 	*
 	* Method: setSouth
@@ -83,15 +83,15 @@ public class Cell {
 	* Description: Sets the south value of the current cell to a given cell
 	*
 	* @param  cell  The Cell which will be directly south of the current cell
-	* 			
+	*
 	* @return None
-	* 		
+	*
 	********************************************************************************/
-   
+
   public void setSouth(Cell cell) {
     this.south = cell;
   }
-  
+
   /********************************************************************************
 	*
 	* Method: setWest
@@ -99,15 +99,15 @@ public class Cell {
 	* Description: Sets the west value of the current cell to a given cell
 	*
 	* @param  cell  The Cell which will be directly west of the current cell
-	* 			
+	*
 	* @return None
-	* 		
+	*
 	********************************************************************************/
-   
+
   public void setWest(Cell cell) {
     this.west = cell;
   }
-  
+
   /********************************************************************************
 	*
 	* Method: setData
@@ -115,15 +115,15 @@ public class Cell {
 	* Description: Sets the data of the current cell to the given data
 	*
 	* @param  newData  The data which the cell should contain
-	* 			
+	*
 	* @return None
-	* 		
+	*
 	********************************************************************************/
-   
+
   public void setData(String newData) {
     this.data = newData;
   }
-  
+
   /********************************************************************************
 	*
 	* Method: getNorth
@@ -131,15 +131,15 @@ public class Cell {
 	* Description: Returns the cell directly north of the given cell
 	*
 	* @param  None
-	* 			
+	*
 	* @return The cell directly north of the current cell
-	* 		
+	*
 	********************************************************************************/
-   
+
   public Cell getNorth() {
     return this.north;
   }
-  
+
   /********************************************************************************
 	*
 	* Method: getEast
@@ -147,15 +147,15 @@ public class Cell {
 	* Description: Returns the cell directly east of the given cell
 	*
 	* @param  None
-	* 			
+	*
 	* @return The cell directly east of the current cell
-	* 		
+	*
 	********************************************************************************/
-   
+
   public Cell getEast() {
     return this.east;
   }
-  
+
   /********************************************************************************
 	*
 	* Method: getSouth
@@ -163,15 +163,15 @@ public class Cell {
 	* Description: Returns the cell directly south of the given cell
 	*
 	* @param  None
-	* 			
+	*
 	* @return The cell directly south of the current cell
-	* 		
+	*
 	********************************************************************************/
-   
+
   public Cell getSouth() {
     return this.south;
   }
-  
+
   /********************************************************************************
 	*
 	* Method: getWest
@@ -179,15 +179,15 @@ public class Cell {
 	* Description: Returns the cell directly west of the given cell
 	*
 	* @param  None
-	* 			
+	*
 	* @return The cell directly west of the current cell
-	* 		
+	*
 	********************************************************************************/
-   
+
   public Cell getWest() {
     return this.west;
   }
-  
+
   /********************************************************************************
 	*
 	* Method: getData
@@ -195,11 +195,11 @@ public class Cell {
 	* Description: Returns the data contained in the current cell
 	*
 	* @param  None
-	* 			
+	*
 	* @return The data contained in the current cell
-	* 		
+	*
 	********************************************************************************/
-   
+
   public String getData() {
     return this.data;
   }

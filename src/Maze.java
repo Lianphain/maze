@@ -26,14 +26,14 @@ public class Maze{
 
 
 
-  /* Constructs the maze of a given size, using the given file.*/
+  // Constructs the maze of a given size, using the given file.
   public Maze(int numRows, int numCols, String filename){
     maze = new Grid(numRows, numCols);
     rows = numRows;
     cols = numCols;
     fileName = filename;
-    Scanner fr = new Scanner(new FileReader(filename));
     try{
+        Scanner fr = new Scanner(new FileReader(filename));
         for(int i = 0; i < numRows; i++){
           for(int j = 0; j < numCols; j++){
             maze.setData(i, j, fr.next());
@@ -44,33 +44,33 @@ public class Maze{
     }
   }
 
-  /*Traverses through the maze using a Stack. If there is no start, print “This maze has no start!”
-  If an exit cannot be found then print, “No exit was found.” Otherwise, as soon as an exit has
-  been found, stop traversing through the maze, and print, “You have found the exit!” Each
-  time a cell is visited, print the maze.*/
+  //Traverses through the maze using a Stack. If there is no start, print “This maze has no start!”
+  //If an exit cannot be found then print, “No exit was found.” Otherwise, as soon as an exit has
+  //been found, stop traversing through the maze, and print, “You have found the exit!” Each
+  //time a cell is visited, print the maze.
   public void findExitUsingStack(){
 
   }
 
-  /*Traverses through the maze using a Queue. If there is no start, print “This maze has no start!”
-  If an exit cannot be found then print, “No exit was found.” Otherwise, as soon as an exit has
-  been found, stop traversing through the maze, and print, “You have found the exit!” Each
-  time a cell is visited, print the maze.*/
+  //Traverses through the maze using a Queue. If there is no start, print “This maze has no start!”
+  //If an exit cannot be found then print, “No exit was found.” Otherwise, as soon as an exit has
+  //been found, stop traversing through the maze, and print, “You have found the exit!” Each
+  //time a cell is visited, print the maze.
   public void findExitUsingQueue(){
 
   }
 
-  /*Resets the maze using the initial file.*/
+  //Resets the maze using the initial file.
   public void resetMaze(){
-
+    maze = new Grid(rows, cols);
   }
 
-  /*Returns a String representation of the maze*/
+  //Returns a String representation of the maze
   public String toString(){
     String temp = "";
-    for(int i = 0; i < numRows; i++){
-      for(int j = 0; j < numCols; j++){
-        temp += (maze.getData(i, j) + " ")
+    for(int i = 0; i < rows; i++){
+      for(int j = 0; j < cols; j++){
+        temp += (maze.getData(i, j) + " ");
       }
       temp += "\n";
     }
