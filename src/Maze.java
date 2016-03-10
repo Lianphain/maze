@@ -23,6 +23,10 @@ public class Maze{
   private int cols;
   private Grid maze;
   private String fileName;
+  private Cell exit = null;
+  private Cell start = null;
+  private Stack<Cell> stack = new Stack<Cell>();
+  private Queue queue = new Queue<Cell>();
 
 
 
@@ -77,7 +81,17 @@ public class Maze{
   //been found, stop traversing through the maze, and print, "You have found the exit!" Each
   //time a cell is visited, print the maze.
   public void findExitUsingStack(){
-
+    start.setData("S");
+    exit.setData("E");
+    boolean check = false;
+    R: for(int i = 0; i < rows; i++){
+        for(int j = 0; j < cols; j++){
+          if(maze.getData(i, j).equals("S")){
+            start = maze.getCell(i, j);
+            check = true;
+          }
+        }
+      }
   }
 
 
