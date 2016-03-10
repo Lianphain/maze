@@ -19,5 +19,6 @@ public class Driver{
   public static void main(String[] args) {
     Maze test = new Maze(6, 7, "maze1.txt");
     System.out.println(test.toString());
+    test.findExitUsingStack();
   }
 }

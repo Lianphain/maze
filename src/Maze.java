@@ -23,8 +23,10 @@ public class Maze{
   private int cols;
   private Grid maze;
   private String fileName;
+  private boolean check = false;
   private Cell exit = null;
   private Cell start = null;
+  private Cell temp = null;
   private Stack<Cell> stack = new Stack<Cell>();
   private Queue queue = new Queue<Cell>();
 
@@ -81,17 +83,59 @@ public class Maze{
   //been found, stop traversing through the maze, and print, "You have found the exit!" Each
   //time a cell is visited, print the maze.
   public void findExitUsingStack(){
-    start.setData("S");
-    exit.setData("E");
-    boolean check = false;
-    R: for(int i = 0; i < rows; i++){
-        for(int j = 0; j < cols; j++){
-          if(maze.getData(i, j).equals("S")){
-            start = maze.getCell(i, j);
-            check = true;
+    if(temp == null){
+      R: for(int i = 0; i < rows; i++){
+          for(int j = 0; j < cols; j++){
+            if(maze.getData(i, j).equals("S")){
+              start = maze.getCell(i, j);
+              temp = start;
+              stack.push(temp);
+              check = true;
+              break R;
+            }
           }
         }
-      }
+    }
+    if(check == true){
+        temp.setData("V");
+        if(temp.getNorth().getData().equals("*")){
+          System.out.println("Success");
+        }
+        else if(temp.getNorth().getData().equals("E")){
+
+        }
+        else{
+          if(temp.getEast().getData().equals("*")){
+
+          }
+          else if(temp.getEast().getData().equals("E")){
+
+          }
+          else{
+            if(temp.getSouth().getData().equals("*")){
+
+            }
+            else if(temp.getSouth().getData().equals("E")){
+
+            }
+            else{
+              if(temp.getWest().getData().equals("*")){
+
+              }
+              else if(temp.getWest().getData().equals("E")){
+
+              }
+              else{
+                stack.pop();
+                System.out.println("No exit was foud.");
+              }
+            }
+          }
+        }
+    }
+    else{
+      System.out.println("This maze has no start!");
+    }
   }
 
 
